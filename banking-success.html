@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking Setup Complete - Wheelify</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; text-align: center; padding: 40px; }
-        .success { color: #28a745; font-size: 24px; margin-bottom: 20px; }
-        .message { color: #666; margin-bottom: 30px; }
-        .button { background: #007AFF; color: white; padding: 12px 24px; border: none; border-radius: 8px; text-decoration: none; display: inline-block; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+        }
+        .checkmark {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            background: #007AFF;
+            border-radius: 15px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
     </style>
 </head>
 <body>
-    <div class="success">✅ Banking Setup Complete!</div>
-    <div class="message">
-        Your bank account has been successfully connected to Wheelify.<br>
-        You can now receive payouts from bike rentals.
+    <div class="container">
+        <div class="checkmark">✅</div>
+        <h1>Banking Setup Complete!</h1>
+        <p>Your bank account has been successfully connected to receive payouts.</p>
+        <div class="app-icon">🚲</div>
+        <p><strong>Please return to the Wheelify app to continue.</strong></p>
+        <p style="font-size: 14px; opacity: 0.8;">You can now close this browser and go back to the app.</p>
     </div>
-    <a href="wheelify://" class="button">Return to App</a>
-    <script>
-        // Auto-redirect to app after 3 seconds
-        setTimeout(() => {
-            window.location.href = 'wheelify://';
-        }, 3000);
-    </script>
 </body>
 </html>
